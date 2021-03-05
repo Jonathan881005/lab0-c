@@ -113,7 +113,12 @@ class Tracer:
             self.command = ['valgrind', self.qtest]
         else:
             self.command = [self.qtest]
+        
+        i = 0#
         for t in tidList:
+            i = i + 1       #
+            #if(i == 2):     #
+            #    break       #
             tname = self.traceDict[t]
             if self.verbLevel > 0:
                 print("+++ TESTING trace %s:" % tname)
